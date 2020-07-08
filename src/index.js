@@ -4,7 +4,7 @@ const padRight = (text = '', maxLength = 13) => (text.length < maxLength ? text 
 
 const fillDash = (length) => new Array(length).fill('-').join('');
 
-const getLines = (columns) => fillDash(columns.reduce((sum, col) => (col.width ?? 10) + sum, 0));
+const getLines = (columns) => fillDash(columns.reduce((sum, col) => (col.width ?? 10) + sum, 0) + columns.length - 1);
 
 const getCol = ({ align = 'left', width = 10, dataIndex, prefix = '', suffix = '' }, row = {}) => {
 	const pad = align === 'right' ? padLeft : padRight;
@@ -13,7 +13,7 @@ const getCol = ({ align = 'left', width = 10, dataIndex, prefix = '', suffix = '
 
 const getRow = (columns, row) => {
 	if (row === '-') return getLines(columns);
-	return columns.map((column) => getCol(column, row)).join('');
+	return columns.map((column) => getCol(column, row)).join(' ');
 };
 
 const getHeaderCol = ({ align = 'left', width = 10, title }) => {
@@ -22,7 +22,7 @@ const getHeaderCol = ({ align = 'left', width = 10, title }) => {
 };
 
 const getHeaderRow = (columns) => {
-	return columns.map((column) => getHeaderCol(column)).join('');
+	return columns.map((column) => getHeaderCol(column)).join(' ');
 };
 
 const slackTable = ({ title = '', columns = [], dataSource = [] }) => {
