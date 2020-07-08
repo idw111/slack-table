@@ -25,6 +25,8 @@ const table = slackTable({
 		{ campaign: 'Google CPC', install: '12', cost: '$ 400' },
 		{ campaign: 'Facebook CPC', install: '3', cost: '$ 60' },
 		{ campaign: 'Youtube Video', install: '131', cost: '$ 1,230' },
+		'-',
+		{ campaign: 'Total', install: '146', cost: '$ 1,690' },
 	],
 });
 ```
@@ -33,4 +35,4 @@ When I build a slack slash command, I wanted to format the command results look 
 
 Warning: CJK characters will break the table layout
 
-![slack-table](https://user-images.githubusercontent.com/445464/86891098-3eda1e00-c139-11ea-8a99-96cecf0da15d.png)
+![slack-table](https://user-images.githubusercontent.com/445464/86894539-291b2780-c13e-11ea-83e1-7bd3ace9320b.png)
