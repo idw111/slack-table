@@ -1,6 +1,6 @@
 {
 	"name": "slack-table",
-	"version": "0.4.0",
+	"version": "0.1.0",
 	"description": "generates slack markdown text which looks like table",
 	"main": "./lib/index.js",
 	"files": [
@@ -18,10 +18,10 @@
 		"url": "https://github.com/idw111/slack-table"
 	},
 	"keywords": [
-		"react",
-		"hook",
-		"google spreadsheet",
-		"jam stack"
+		"slack",
+		"slash command",
+		"markdown",
+		"table"
 	],
 	"author": "Dongwon Lim",
 	"license": "MIT",

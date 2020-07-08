@@ -14,17 +14,17 @@ npm install slack-table
 import slackTable from 'slack-table';
 
 const table = slackTable({
-	title: 'Table',
+	title: 'Marketing Summary',
 	columns: [
-		{ width: 20, title: 'title1', dataIndex: 'first' },
-		{ width: 10, title: 'title2', dataIndex: 'second', align: 'right' },
-		{ width: 10, title: 'title3', dataIndex: 'third', align: 'right' },
+		{ width: 20, title: 'Campaign', dataIndex: 'campaign' },
+		{ width: 10, title: 'Install', dataIndex: 'install', align: 'right' },
+		{ width: 12, title: 'Cost', dataIndex: 'cost', align: 'right' },
 	],
 	dataSource: [
 		'-',
-		{ first: 'first item', second: 'second item', third: 'third item' },
-		{ first: 'first item', second: 'second item', third: 'third item' },
-		{ first: 'first item', second: 'second item', third: 'third item' },
+		{ campaign: 'Google CPC', install: '12', cost: '$ 400' },
+		{ campaign: 'Facebook CPC', install: '3', cost: '$ 60' },
+		{ campaign: 'Youtube Video', install: '131', cost: '$ 1,230' },
 	],
 });
 ```
@@ -33,4 +33,4 @@ When I build a slack slash command, I wanted to format the command results look 
 
 Warning: CJK characters will break the table layout
 
-![slack-table](https://user-images.githubusercontent.com/445464/86876965-d2ebbb80-c120-11ea-87ea-fe98f01c77c7.png)
+![slack-table](https://user-images.githubusercontent.com/445464/86891098-3eda1e00-c139-11ea-8a99-96cecf0da15d.png)
