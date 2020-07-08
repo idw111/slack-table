@@ -29,6 +29,8 @@ const table = slackTable({
 });
 ```
 
-Use the result string in slack markdown block, and you can get the following view
+When I build a slack slash command, I wanted to format the command results look like table. However, I could not find a simple way to do that, and decided to build a table-like view using code. Use the result string in slack markdown text, and you can get the following view.
+
+_Warning_ CJK characters will break the table layout
 
 ![slack-table](https://user-images.githubusercontent.com/445464/86876965-d2ebbb80-c120-11ea-87ea-fe98f01c77c7.png)
